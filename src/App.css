@@ -1,38 +1,137 @@
+:root {
+  --bg:rgb(22, 160, 133);
+}
+
 .App {
+  height: 100vh;
+  width: 100%;
+  background: var(--bg);
+  color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#quote-box {  
+  background: white;
+  width: 500px;
+  padding: 25px 50px!important;
+}
+
+#text {
+  font-size: 1.75em;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#author {
+  text-align: end;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#leftq {
+  vertical-align: top;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  color: white!important;
 }
 
-@keyframes App-logo-spin {
+.change {
+  margin-left: auto;
+}
+
+.fadeout {
+  animation: fade-out 1s ease-in-out;
+  opacity: 0;
+}
+
+.fadein {
+  animation: fade-in 1s ease-in-out;
+  opacity: 1;
+}
+
+.grey {
+  background-color: rgb(119, 177, 169); 
+  color: rgb(119, 177, 169);
+}
+.red {
+  background-color: rgb(251, 105, 100);
+   color: rgb(251, 105, 100);
+}
+.green {
+  background-color: rgb(22, 160, 133);
+  color: rgb(22, 160, 133);
+}
+
+.greyred {
+  animation: greyred 1s ease;
+  animation-fill-mode: forwards;
+}
+.greygreen {
+  animation: greygreen 1s ease;
+  animation-fill-mode: forwards;
+}
+.greengrey {
+  animation: greengrey 1s ease;
+  animation-fill-mode: forwards;
+}
+.greenred {
+  animation: greenred 1s ease;
+  animation-fill-mode: forwards;
+}
+.redgreen {
+  animation: redgreen 1s ease;
+  animation-fill-mode: forwards;
+}
+.redgrey {
+  animation: redgrey 1s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes greyred {
+  from {background-color: rgb(119, 177, 169);}
+  to {background-color: rgb(251, 105, 100);}
+}
+@keyframes greygreen {
+  from {background-color: rgb(119, 177, 169);}
+  to {background-color: rgb(22, 160, 133);}
+}
+@keyframes greengrey {
+  from {background-color: rgb(22, 160, 133);}
+  to {background-color: rgb(119, 177, 169);}
+}
+@keyframes greenred {
+  from {background-color: rgb(22, 160, 133);}
+  to {background-color: rgb(251, 105, 100);}
+}
+@keyframes redgreen {
+  to {background-color: rgb(22, 160, 133);}
+  from {background-color: rgb(251, 105, 100);}
+}
+@keyframes redgrey {
+  to {background-color: rgb(22, 160, 133);}
+  from {background-color: rgb(119, 177, 169);}
+}
+
+@keyframes fade-out {
   from {
-    transform: rotate(0deg);
+    opacity: 1;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
